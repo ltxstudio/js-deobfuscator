@@ -16,9 +16,7 @@ import {
   DownloadIcon,
   CodeBracketIcon,
   QuestionMarkCircleIcon,
-  ArrowDownIcon,
   ShieldCheckIcon,
-  ChatBubbleLeftEllipsisIcon,
 } from '@heroicons/react/24/outline';
 
 import 'react-toastify/dist/ReactToastify.css';
@@ -69,7 +67,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gray-900 text-white">
-      {/* Header Section */}
       <header className="bg-gray-800 p-6 sticky top-0 z-50">
         <nav className="container mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">JS Deobfuscator</h1>
@@ -81,7 +78,6 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* About Section */}
       <section id="about" className="container mx-auto py-10">
         <div className="text-center">
           <h2 className="text-3xl font-bold">About This Tool</h2>
@@ -91,11 +87,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
       <section id="features" className="bg-gray-800 py-10">
         <div className="container mx-auto">
           <h2 className="text-center text-3xl font-bold mb-6">Features</h2>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Feature icon={CodeBracketIcon} title="Real-time Deobfuscation" />
             <Feature icon={ShieldCheckIcon} title="Syntax Validation" />
             <Feature icon={DocumentDuplicateIcon} title="Copy & Export Code" />
@@ -103,10 +98,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Main Deobfuscation Section */}
       <section className="container mx-auto py-10">
-        <div className="grid grid-cols-3 gap-6">
-          {/* Input Area */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="col-span-1 bg-gray-800 p-6 rounded">
             <textarea
               value={inputCode}
@@ -123,7 +116,6 @@ export default function Home() {
             </motion.button>
           </div>
 
-          {/* Output Area */}
           <div className="col-span-2 bg-gray-800 p-6 rounded">
             <Tab.Group>
               <Tab.List className="flex">
@@ -149,11 +141,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ Section */}
       <section id="faq" className="py-10">
         <div className="container mx-auto">
           <h2 className="text-center text-3xl font-bold mb-6">FAQ</h2>
-          <FAQ title="How does the tool work?" content="The tool applies reverse-engineering techniques..." />
+          <FAQ title="How does the tool work?" content="The tool applies reverse-engineering techniques." />
           <FAQ title="Is it secure?" content="Yes, all processing is done locally." />
         </div>
       </section>
